@@ -1,0 +1,16 @@
+# Modules
+node_modules/
+
+# ObjToSchematic
+ObjToSchematic/*
+
+# Generated Files
+*.sh
+*.litematic
+*.obj
+*.mtl
+*.schem
+output.png
+
+# VS
+.vs

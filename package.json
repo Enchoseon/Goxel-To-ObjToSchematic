@@ -1,0 +1,19 @@
+{
+  "name": "goxel-fixer",
+  "version": "1.0.0",
+  "description": "A tool that takes Goxel's broken OBJ exports and turns them into valid OBJ files that can be fed into ObjToSchematic, allowing for a Goxel-to-Minecraft workflow!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Enchoseon",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Enchoseon/GoxelFixer.git"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
+}
