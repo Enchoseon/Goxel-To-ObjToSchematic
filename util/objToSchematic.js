@@ -40,7 +40,7 @@ function createConfig(maxHeight, objToSchematicPath, objToSchematicFormat, outpu
             },
             assign: {
                 textureAtlas: 'vanilla',
-                blockPalette: 'greyscale',
+                blockPalette: 'all-release',
                 dithering: 'random',
                 colourSpace: ColourSpace.RGB,
                 fallable: 'replace-falling',
