@@ -1,5 +1,5 @@
  <div align="center">
-	<h1>Goxel Fixer</h1>
+	<h1>Goxel to ObjToSchematic</h1>
 	<p>Tweak Goxel's .obj exports and feed them into ObjToSchematic for a 1:1 Goxel-to-Minecraft workflow!</p>
 	<h4>
 		<a href="https://github.com/Enchoseon/GoxelFixer/issues">Report Bug</a>
