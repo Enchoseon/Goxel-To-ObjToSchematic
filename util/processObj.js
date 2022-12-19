@@ -14,7 +14,8 @@ const { createHash } = require("crypto");
 let materials = { /* "${RGB_HASH}": ${VERTEX_INDEX_ARRAY} } */ }; // Stores every created material and its respective vertices
 let vertexIndex = 0; // The current index of the vertex being processed
 let currentMaterial; // The current material being applied to the faces
-let maximumHeight = 0; // The tallest block found in the model (used for accurate NCRB raytracing)
+let maxBlock = 0; // The tallest block found in the model (used for accurate NCRB voxelization)
+let minBlock = 0; // The lowest block found in the model (used for accurate NCRB voxelization)
 
 // =======================
 // Process Input .Obj File
@@ -46,8 +47,7 @@ async function processObj(argv) {
     return new Promise(resolve => { 
         file.on("close", () => {
             console.log("Done");
-            fs.appendFileSync(argv.outputPath + "/output.obj", "# MaximumHeight=" + maximumHeight + "\n");
-            resolve(maximumHeight);
+            resolve(Math.abs(maxBlock) + Math.abs(minBlock));
         });
     });
 }
@@ -96,8 +96,11 @@ function processLine(line, argv) {
                 line[2] = line[3];
                 line[3] = -temp;
             }
-            if (line[2] > maximumHeight) { // Get maximum height (used to set the height for NCRB voxelization)
-                maximumHeight = line[2];
+            line[2] = parseInt(line[2]); // Get maximum height (used to set the height for NCRB voxelization)
+            if (line[2] > maxBlock) {
+                maxBlock = line[2];
+            } else if (line[2] < minBlock) { // Get minimum height (used to set the height for NCRB voxelization)
+                minBlock = line[2];
             }
             line = line.join(" ") // Combine individual arguments back into a line
             break;
