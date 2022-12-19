@@ -6,7 +6,6 @@
 	</h4>
 	<img src="https://img.shields.io/github/last-commit/Enchoseon/GoxelFixer?color=2A0944&labelColor=525E75&style=flat" alt="Last Commit">
 	<img src="https://img.shields.io/github/languages/code-size/Enchoseon/GoxelFixer?color=3FA796&labelColor=525E75&style=flat" alt="Code Size">
-	<img src="https://img.shields.io/github/package-json/v/Enchoseon/GoxelFixer?color=FEC260&labelColor=525E75&style=flat" alt="Current Version">
 	<img src="https://img.shields.io/github/license/Enchoseon/GoxelFixer?color=A10035&labelColor=525E75&style=flat" alt="License">
 </div>
 
