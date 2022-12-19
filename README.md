@@ -1,6 +1,6 @@
  <div align="center">
 	<h1>Goxel Fixer</h1>
-	<p>Fix Goxel's broken OBJ exports and feed them into ObjToSchematic for a Goxel-to-Minecraft workflow!</p>
+	<p>Tweak Goxel's .obj exports and feed them into ObjToSchematic for a 1:1 Goxel-to-Minecraft workflow!</p>
 	<h4>
 		<a href="https://github.com/Enchoseon/GoxelFixer/issues">Report Bug</a>
 	</h4>
@@ -23,7 +23,7 @@
 
 Goxel is an open-source voxel editor that exports non-standard OBJs with vertex color information crammed into the vertex information. This practice is widespread (e.g. Pixelogic's Zbrush), but has scattershot support.
 
-This small cli tool takes Goxel's obj exports and modifies them to use the standard Material Template Format (.mtl) primarily geared for use with ObjToSchematic for a voxel:voxel precision workflow in Minecraft.
+This small cli tool takes Goxel's .obj exports and modifies them to use the standard Material Template Format (.mtl). The modifications applied are primarily geared for use with ObjToSchematic for a 1:1 conversion to Minecraft blocks.
 
 # Command Line Options
 
@@ -59,7 +59,7 @@ This small cli tool takes Goxel's obj exports and modifies them to use the stand
 # Examples
 
 - `node . --input "./goxelExport.obj" --trim --rot`
-    - Generate a trimmed and rotated .obj file in the root directory.
+    - Generate a trimmed and rotated .obj file in the root directory from an .obj file in the root directory.
 - ` node . --input "./goxelExport.obj" --trim --rot --vox "./ObjToSchematic"`
     - Same as previous example, but update the headless-config.ts file in an instance of ObjToSchematic in the root folder.
 - ` node . --input "./goxelExport.obj" --trim --rot --vox "./ObjToSchematic" --voxFormat "litematic" && bash ./voxelize.sh`
